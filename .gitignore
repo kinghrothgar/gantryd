@@ -4,3 +4,4 @@ gantry.xml
 venv
 haproxy.conf
 .gantry_metadata
+.*.sw[opn]
