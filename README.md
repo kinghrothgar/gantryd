@@ -74,6 +74,10 @@ The configuration defines the various components of the project you want to mana
        "bindings": [
          { "external": "/an/external/path", "volume": "/some/container/path"}
        ],
+       "dnsServers": [
+         "8.8.8.8",
+         "8.8.4.4"
+       ],
        "defineComponentLinks": [
          { "port": 8888, "name": "mycoolserver", "kind": "tcp" }
        ],
@@ -102,6 +106,7 @@ The configuration defines the various components of the project you want to mana
 | terminationChecks     | The various checks to run to ensure that the container is ready to be shut down   | connections |
 | volumesFrom           | Container(s), by name, whose volume(s) should be mounted into the container       |             |
 | bindings              | Mapping between external hosts paths and the corresponding container volumes      |             |
+| dnsServers            | The IP addresses to override nameserver lines in container's `/etc/resolv.conf`   |             |
 | defineComponentLinks  | Defines the component links exported by this component                            |             |
 | requireComponentLinks | Defines the component links imported/required by this component                   |             |
 | readyTimeout          | Timeout in milliseconds that we will wait for a container to pass a ready check   | 10,000      |

@@ -107,6 +107,7 @@ class _Component(CFObject):
   user = CFField('user').default('')
   ports = CFField('ports').list_of(_PortMapping).default([])
   bindings = CFField('bindings').list_of(_VolumeBinding).default([])
+  dnsServers = CFField('dnsServers').list_of(str).default([])
   volumes_from = CFField('volumesFrom').list_of(str).default([])
   ready_checks = CFField('readyChecks').list_of(_HealthCheck).default([])
   health_checks = CFField('healthChecks').list_of(_HealthCheck).default([])
